@@ -3,7 +3,6 @@ const tabs = () => {
     const tabsTitle = document.querySelector('.card-details__title');
     const tabsPrice = document.querySelector('.card-details__price');
     const tabsImage = document.querySelector('.card__image_item');
-    const documentTitle = document.querySelector('title');
 
     const tabsOptions = [
         {
@@ -33,7 +32,7 @@ const tabs = () => {
         tabsPrice.textContent = `${tab.price}₽`;
         // tabsImage.src = tab.image;
         tabsImage.setAttribute('src', tab.image);
-        documentTitle.textContent = tab.name;
+        document.title = tab.name;
     };
 
     const changeActiveTab = (indexClickedTab) => {
